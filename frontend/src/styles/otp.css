@@ -1,0 +1,114 @@
+/* =====================================================
+   otp.css  –  OTP input box grid
+   ===================================================== */
+
+.otp-boxes {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 4px 0;
+}
+
+.otp-box {
+  width: 52px;
+  height: 60px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-text);
+  background: var(--color-surface);
+  transition: var(--transition);
+  outline: none;
+  caret-color: var(--color-primary);
+  /* hide browser number spinners */
+  -moz-appearance: textfield;
+}
+
+.otp-box::-webkit-outer-spin-button,
+.otp-box::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.otp-box:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+  background: var(--color-primary-bg);
+}
+
+.otp-box.filled {
+  border-color: var(--color-primary-light);
+  background: var(--color-primary-bg);
+}
+
+.otp-box.otp-error {
+  border-color: var(--color-error);
+  background: var(--color-error-bg);
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0);  }
+  20%       { transform: translateX(-6px); }
+  40%       { transform: translateX(6px);  }
+  60%       { transform: translateX(-4px); }
+  80%       { transform: translateX(4px);  }
+}
+
+.otp-box:disabled {
+  background: #f1f5f9;
+  cursor: not-allowed;
+}
+
+/* ── Countdown & resend row ── */
+.otp-resend-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.otp-countdown {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.otp-countdown-badge {
+  background: var(--color-primary-bg);
+  color: var(--color-primary);
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  min-width: 56px;
+  text-align: center;
+}
+
+/* ── Attempt indicator ── */
+.otp-attempts {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.otp-attempts.low {
+  color: var(--color-warning);
+  font-weight: 600;
+}
+
+@media (max-width: 400px) {
+  .otp-box {
+    width: 42px;
+    height: 52px;
+    font-size: 1.25rem;
+  }
+  .otp-boxes {
+    gap: 7px;
+  }
+}

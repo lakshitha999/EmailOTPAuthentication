@@ -1,0 +1,102 @@
+/* =====================================================
+   success.css  –  success page specific styles
+   ===================================================== */
+
+.success-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.success-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  padding: 56px 40px;
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.success-checkmark {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+  font-size: 36px;
+  box-shadow: 0 10px 30px rgba(17,153,142,0.4);
+}
+
+.success-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.success-message {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.success-email {
+  display: inline-block;
+  background: #f0fdf4;
+  color: #16a34a;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  margin: 12px 0 28px;
+  border: 1px solid #bbf7d0;
+}
+
+.success-divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: 24px 0;
+}
+
+.btn-success {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 32px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 14px rgba(17,153,142,0.4);
+  text-decoration: none;
+}
+
+.btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(17,153,142,0.5);
+}
+
+@media (max-width: 480px) {
+  .success-card {
+    padding: 40px 24px;
+  }
+}

@@ -1,0 +1,65 @@
+/* =====================================================
+   global.css  –  base resets & shared tokens
+   ===================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Brand palette */
+  --color-primary:        #4f46e5;   /* indigo-600  */
+  --color-primary-dark:   #4338ca;   /* indigo-700  */
+  --color-primary-light:  #818cf8;   /* indigo-400  */
+  --color-primary-bg:     #eef2ff;   /* indigo-50   */
+
+  --color-success:        #16a34a;   /* green-600   */
+  --color-success-bg:     #dcfce7;   /* green-100   */
+  --color-error:          #dc2626;   /* red-600     */
+  --color-error-bg:       #fee2e2;   /* red-100     */
+  --color-warning:        #d97706;   /* amber-600   */
+  --color-warning-bg:     #fef3c7;   /* amber-100   */
+
+  /* Neutrals */
+  --color-bg:             #f8fafc;
+  --color-surface:        #ffffff;
+  --color-border:         #e2e8f0;
+  --color-text:           #1e293b;
+  --color-text-muted:     #64748b;
+  --color-text-placeholder: #94a3b8;
+
+  /* Layout */
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --shadow-card: 0 10px 40px rgba(79, 70, 229, 0.08), 0 1px 3px rgba(0,0,0,0.06);
+  --transition:  all 0.2s ease;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Utility helpers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
